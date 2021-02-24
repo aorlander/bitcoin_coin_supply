@@ -18,7 +18,7 @@ def num_BTC(b):
     
     c = float(n)
     print(c)
-    return c
+    return c - 1
 
 
-# num_BTC(12600)
+# num_BTC(545145)
