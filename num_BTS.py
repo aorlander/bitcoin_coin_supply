@@ -6,19 +6,20 @@ from pathlib import Path
 # Input is block height (integer)
 # Return total number of tokens that have been mined so far (up to and including the given block)
 def num_BTC(b):
-    r = 50
-    n = 0
-    count = 0
+    reward = 50
+    tok = 0
+    height = 1
+    max = 210000
 
-    while count < b :
-        count = count + 1
-        n = n + r
-        i = int(n)
-        if pow(i, 1, 210000) == 0:   # Reward halves every 210k blocks
-            r = r/2 
+    while height <= b :
+        height = height + 1
+        tok = tok + reward
+        tok_int = int(tok)
+        if pow(tok_int, 1, max) == 0:   # Reward halves every 210k blocks
+            reward = reward/2 
             
-    print(float(n))
-    return float(n)
+    print(float(tok))
+    return float(tok)
 
 # test cases
 num_BTC(1)
