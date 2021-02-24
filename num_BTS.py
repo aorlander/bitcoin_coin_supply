@@ -18,6 +18,7 @@ def num_BTC(b):
         count = count + 1
     
     c = float(n)
+    print(c)
     return c
 
 
