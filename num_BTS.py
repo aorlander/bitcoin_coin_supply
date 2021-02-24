@@ -9,7 +9,7 @@ def num_BTC(b):
     n = 0
     count = 0
 
-    while count <= b :
+    while count < b :
         n = n + r
         i = int(n)
         if pow(i, 1, max) == 0:   # Reward halves every 210k blocks
@@ -20,8 +20,9 @@ def num_BTC(b):
     print(c)
     return c
 
+# test cases
 num_BTC(1)
 num_BTC(2)
 num_BTC(4199)
-num_BTC(4200)
+num_BTC(4200) # split 
 num_BTC(4201)
