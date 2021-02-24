@@ -1,4 +1,7 @@
 import math
+import os
+import pygit2
+import shutil
 
 # Return total number of tokens that have been mined so far (up to and including the given block)
 def num_BTC(b):
