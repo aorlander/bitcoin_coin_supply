@@ -8,23 +8,12 @@ from pathlib import Path
 def num_BTC(b):
     reward = 50.00
     tok = 0.00
-    height = 1
-    max = 210000
+    mined = 0
 
-    while height <= b :
-        height = height + 1
+    while mined < b :
+        mined = mined + 1
         tok = tok + reward
-        tok_int = int(tok)
-        remainder = pow(tok_int, 1, max)
-        if remainder == 0:   # Reward halves every 210k blocks
-            reward = reward/2.00 
+        if pow(mined, 1, 210000) == 0:   # Reward halves every 210k blocks
+            reward = reward/2 
 
-    c = float(tok)
-    return c
-
-# test cases
-# num_BTC(1)
-# num_BTC(2)
-# num_BTC(4199)
-# num_BTC(4200) # split 
-# num_BTC(4201)
+    return float(tok)
