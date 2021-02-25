@@ -15,15 +15,16 @@ def num_BTC(b):
         height = height + 1
         tok = tok + reward
         tok_int = int(tok)
-        if pow(tok_int, 1, max) == 0:   # Reward halves every 210k blocks
+        remainder = pow(tok_int, 1, max)
+        if remainder == 0:   # Reward halves every 210k blocks
             reward = reward/2 
             
     print(float(tok))
     return float(tok)
 
 # test cases
-num_BTC(1)
-num_BTC(2)
-num_BTC(4199)
-num_BTC(4200) # split 
-num_BTC(4201)
+# num_BTC(1)
+# num_BTC(2)
+# num_BTC(4199)
+# num_BTC(4200) # split 
+# num_BTC(4201)
