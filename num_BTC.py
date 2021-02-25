@@ -17,9 +17,10 @@ def num_BTC(b):
         tok_int = int(tok)
         remainder = pow(tok_int, 1, max)
         if remainder == 0:   # Reward halves every 210k blocks
-            reward = reward/2 
-  
-    return float(tok)
+            reward = reward/2.00 
+
+    c = float(tok)
+    return c
 
 # test cases
 # num_BTC(1)
